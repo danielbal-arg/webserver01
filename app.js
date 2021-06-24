@@ -1,5 +1,7 @@
+require('dotenv').config();
 const express = require('express')
-const app = express()
+const app = express();
+
  
 
 //middleware
@@ -13,4 +15,4 @@ app.get('/generic', (req, res) => {
     res.send('404')
   })
 
-app.listen(8080)
+app.listen(process.env.PORT)
